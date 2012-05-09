@@ -1,0 +1,22 @@
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>MusicIP</title>
+
+  <script type="text/javascript">
+		simpleDomain = localStorage['simpleDomain'] || '';
+		protocol = localStorage['musicip-protocol'] || defaults[7];
+		port = localStorage['musicip-port'] || defaults[8];
+		function init() {
+      window.parent.location.href=protocol+'://'+simpleDomain+':'+port;
+			document.getElementById( 'box' );				
+		};
+  </script>
+</head>
+
+<body onload="init();">
+	<div id="box"></div>
+</body>
+
+</html>

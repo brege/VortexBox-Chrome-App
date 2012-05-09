@@ -1,0 +1,43 @@
+var options = ['vortexbox-protocol',
+               'domain',
+               'squeezebox-protocol',
+               'squeezebox-port',
+               'transmission-protocol',
+               'transmission-port',
+               'musicip-protocol',
+               'musicip-port',
+               'subsonic-protocol',
+               'subsonic-port',
+               'bliss-protocol',
+               'bliss-port',
+               'webmin-protocol',
+               'webmin-port',
+               'shellinabox-protocol',
+               'shellinabox-port',
+               'subsonic-online-protocol',
+               'subsonic-online-domain',
+              ];
+
+var Domain = ['vortexbox-protocol',
+               'domain'
+              ];
+
+var defaults = ['http',
+                'localhost',
+                'http',
+                9000,
+                'http',
+                9091,
+                'http',
+                10002,
+                'http',
+                4040,
+                'http',
+                3220,
+                'http',
+                10000,
+                'http',
+                4200,
+                'http',
+                'subsonic.org'
+               ];

@@ -1,0 +1,146 @@
+<html>
+
+<head>
+<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+
+<title>VortexBox Options</title>
+
+<link rel="stylesheet" href="deck.css" TYPE="text/css" MEDIA="screen"/>
+
+
+<!-- Submission script (Options)-->
+<script>
+	var user = localStorage['domain'] || '';
+	var subs = localStorage['subsonic'] || '';
+	var simpleDomain = localStorage['simpleDomain'] || '';
+	console.log( user );
+	function init() {
+		var p = document.createElement( 'p' );
+		var inp = document.createElement( 'input' );
+		var btn = document.createElement( 'input' );
+		var inp2 = document.createElement( 'input' );
+		var btn2 = document.createElement( 'input' );
+		var txt1 = document.createTextNode( 'Change your VortexBox local IP:    ' );
+		var txt2 = document.createTextNode( 'e.g. 192.168.1.101' );
+		var txt3 = document.createTextNode( 'Enter subsonic domain:   ' );
+		var txt4 = document.createTextNode( 'e.g. mydomain.subsonic.org' );
+		var font1 = document.createElement( 'font1' );
+		var font2 = document.createElement( 'font2' );
+		var font3 = document.createElement( 'font3' );
+		var font4 = document.createElement( 'font4' );
+
+		inp.id = "uname";
+		inp.type = "text";
+		btn.type = "button";
+		btn.value = "Submit";
+		inp2.id = "uname2";
+		inp2.type = "text";
+		btn2.type = "button";
+		btn2.value = "Submit";
+		font1.style.fontSize = "17px";
+		font1.appendChild(txt1);		
+		font2.style.color = "grey";
+		font2.style.fontSize = "15px";
+		font2.appendChild(txt2);
+		font3.style.fontSize = "17px";
+		font3.appendChild(txt3);		
+		font4.style.color = "grey";
+		font4.style.fontSize = "15px";
+		font4.appendChild(txt4);
+
+		btn.onclick = function() {
+			var name = document.getElementById( 'uname' ).value;
+			if ( name !== '' ) {
+				localStorage['domain'] = "http://"+name;
+				localStorage['simpleDomain'] = name;
+				window.document.location.href = 'deck.html';
+			} 
+		}
+		btn2.onclick = function() {
+			var name = document.getElementById( 'uname2' ).value;
+			if ( name !== '' ) {
+				localStorage['subsonic'] = "http://"+name;
+				window.document.location.href = 'deck.html';
+			} 
+		}
+		p.appendChild( font1 );
+//		p.appendChild( document.createElement( 'br' ) );
+		p.appendChild( document.createElement( 'br' ) );
+		p.appendChild( inp );
+		p.appendChild( btn );
+		p.appendChild( document.createElement( 'br' ) );
+		p.appendChild( font2 );
+		p.appendChild( document.createElement( 'br' ) );
+		p.appendChild( document.createElement( 'br' ) );
+		p.appendChild( document.createElement( 'br' ) );
+		p.appendChild( font3 );
+		p.appendChild( document.createElement( 'br' ) );
+//		p.appendChild( document.createElement( 'br' ) );
+		p.appendChild( inp2 );
+		p.appendChild( btn2 );
+		p.appendChild( document.createElement( 'br' ) );
+		p.appendChild( font4 );
+		p.appendChild( document.createElement( 'br' ) );
+		p.appendChild( document.createElement( 'br' ) );
+		
+		document.getElementById( 'box' ).appendChild( p );
+	};
+</script>
+<!-- Submission script -->
+
+<!-- Webmin -->
+<script>
+var webmin = localStorage['webmin'] || ''; 
+function GetSelectedItem() {
+	simpleDomain = localStorage['simpleDomain'];
+	chosen = ""
+	len = document.f1.r1.length
+	for (i = 0; i <len; i++) {
+		if (document.f1.r1[i].checked) {
+			chosen = document.f1.r1[i].value;
+		}
+	}
+	if (chosen == "") {
+		localStorage['webmin'] = chosen+simpleDomain+':10000';
+	} else {
+		localStorage['webmin'] = chosen+simpleDomain+':10000';
+	}
+}
+</script>
+<!-- Webmin -->
+
+</head>
+
+<body onload="init();">
+	<div title="vortexbox.org" id="displayed" style="text-align:center;">
+		<h3>
+			<a href="http://vortexbox.org/"><img src="/images/vortexbox_new_logo.png"><a>
+		</h3>
+	</div>
+	<h4>Options</h4>
+	<div style="margin:20px;">
+		<div id="box"></div>
+		<p>Select if webmin uses http or https: 
+    <form name="f1"> 
+		<input type="radio" 
+						name="r1" 
+						value="http://" 
+						onClick="GetSelectedItem()">
+		  <code>http</code>
+		<input type="radio" 
+						name="r1" 
+						value="https://" 
+						onClick="GetSelectedItem()">
+			<code>https</code>
+		</form>
+		</p>
+	</div>
+	<br/>
+  <div id="highlighttext">
+    <div id="everyother"> 
+		  <a href="deck.html"><b>Back to deck</b></a>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,340 @@
+<!DOCTYPE HTML>
+
+<html i18n-values=" 
+  dir:textdirection;
+  bookmarkbarattached:bookmarkbarattached;
+  hasattribution:hasattribution;
+  anim:anim;
+  syncispresent:syncispresent;
+  customlogo:customlogo"
+  install-animation-enabled="true">
+ 
+<head>  
+
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+  <title>VortexBox Deck</title>
+  <link rel="stylesheet" href="deck.css" TYPE="text/css" MEDIA="screen"/>
+
+  <!-- Save tab cookie -->
+  <script type="text/javascript" src="savetabcookie.js"></script>
+
+  <!--Tab style-->
+  <script type="text/javascript" src="tabber.js"></script>
+
+  <!--Pull ip address from localStorage-->
+  <script type="text/javascript">
+    domain = localStorage['domain'];
+    function DOMAIN(dive) {
+      window.location=domain+dive;
+    }
+    subsonic = localStorage['subsonic'];
+    function SUBSONIC() {
+      window.location=subsonic;
+    }
+    webmin = localStorage['webmin'];
+    function WEBMIN() {
+      window.location=webmin;
+    }
+  </script>
+
+  <!-- reboot confirmation box -->
+  <script type="text/javascript">
+    domain = localStorage['domain'];
+    function ConfirmChoice() {
+      answer = confirm("Are you sure you want to reboot your vortexbox?");
+      if (answer !=0)  {
+        doubleConfirm = confirm('System is going down for reboot!');
+        if (doubleConfirm !=0) {        
+          window.location=domain+'/system.php?action=Reboot';
+        }
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <h1>
+    <div title="vortexbox.org" id="displayed" style="text-align:center;">
+      <a href="http://vortexbox.org/" id="vortexbox.org">
+        <img src="/images/vortexbox_new_logo.png" alt="VB Logo"/>
+      </a>
+    </div>
+  </h1>
+
+  <div class="tabber">
+
+    <!-- ============== DECK ================= -->
+    <div class=tabbertab>
+      <h2>Deck</h2>
+<!--      <table class="center">
+      <tr valign="top">
+      <td colspan="2">
+-->
+      <div id="highlight" class="displayed">
+        <div id="iconPads">
+          <div id="iconSize">
+            <div style="width:12%;height:100%;float:left;">
+              <div class="img">
+                <a href="/html/home.html">
+                  <img src="/images/home.png" alt="" />
+                  <div class="description">Home<br/>&nbsp; </div>
+                </a>
+              </div>
+<!--      </td>
+      <td colspan="2">
+-->
+            </div>
+            <div style="width:86%;height:100%;float:left;">
+
+          <!-- ============== ICON LINE 1 ============== -->
+
+                <div class="img">
+                  <a href="/html/squeeze.html">
+                    <img src="/images/SqueezeCenter.png" alt=""/>
+                    <div class="description">SqueezeBox<br/>Server</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/rippingstatus.html">
+                    <img src="/images/cddrive.png" alt=""/>
+                    <div class="description">Ripping<br/>Status</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/flacmirror.html">
+                    <img src="/images/flacmirror.png" alt=""/>
+                    <div class="description">FLAC<br/>Mirror</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/phpsysinfo.html">
+                    <img src="/images/status.png" alt=""/>
+                    <div class="description">System<br/>Status</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/network.html">
+                    <img src="/images/network.png" alt=""/>
+                    <div class="description">Network<br/>Config</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/system.html">
+                    <img src="/images/tools.png" alt=""/>
+                    <div class="description">System<br/>Config</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/backup.html">
+                    <img src="/images/backup.png" alt=""/>
+                    <div class="description">Backup<br/>&nbsp;  </div>
+                  </a>
+                </div>
+              
+              <!-- ============== ICON LINE 2 ============== -->
+              
+                <div class="img">
+                  <a href="/html/dlna.html">
+                    <img src="/images/dlna_v2.png" alt=""/>
+                    <div class="description">DLNA<br/>&nbsp;</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/daap.html">
+                    <img src="/images/itunes.png" alt=""  />
+                    <div class="description">iTunes<br/>&nbsp;</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/transmission.html">
+                    <img src="/images/transmission.png" alt=""/>
+                    <div class="description">Transmission<br/>&nbsp;</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/musicip.html">
+                    <img src="/images/musicip_v2.png" alt=""/>
+                    <div class="description">MusicIP<br/>&nbsp;  </div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/subsonicnetwork.html">
+                    <img src="/images/subsonic_v2.png" alt=""/>
+                    <div class="description">Subsonic<br/>Network </div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/subsoniconline.html">
+                    <img src="/images/subsonic-gray-128.png" alt=""/>
+                    <div class="description">Subsonic<br/>Online </div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/bliss.html">
+                    <img src="/images/bliss_v2.png" alt=""/>
+                    <div class="description">bliss<br/>&nbsp;   </div>
+                  </a>
+                </div>
+              
+              <!-- ============== ICON LINE 3 ============== -->
+              
+                <div class="img">
+                  <a href="/html/vortexbox-player.html">
+                    <img src="/images/vortexbox-player.png" alt=""/>
+                    <div class="description">VB Player<br/>&nbsp;</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/webmin.html">
+                    <img src="/images/webmin.png" alt=""/>
+                    <div class="description">Webmin<br/>&nbsp;</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/shellinabox.html">
+                    <img src="/images/terminal.png" alt=""/>
+                    <div class="description">Shell in a box<br/>&nbsp;</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="/html/upgrade.html">
+                    <img src="/images/upgrade.png" alt=""/>
+                    <div class="description">Upgrade<br/>&nbsp;</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="http://info.vortexbox.org"
+                    id="info.vortexbox.org">
+                    <img src="/images/wiki.png" alt=""
+                      Height="64" 
+                      Width="64"/>
+                    <div class="description">Wiki<br/>&nbsp;</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="http://vortexbox.org/forum/" 
+                    id="vortexbox.org/forum">
+                    <img src="/images/forum_v2.png" alt=""
+                      Height="64" 
+                      Width="64"/>
+                    <div class="description">Forum<br/>&nbsp;</div>
+                  </a>
+                </div>
+                <div class="img">
+                  <a href="#" onclick="ConfirmChoice(); return false;">
+                    <img src="/images/power.png" alt="" 
+                        Height="64" 
+                        Width="64"/> 
+                    <div class="description">Reboot<br/>&nbsp;</div>
+                  </a>
+                </div>          
+              </div>
+            </div>
+          </div>
+<!--      </td>
+      </tr>
+      </table>
+-->
+        </div>
+      </div>
+
+
+
+    <!-- ============== WIKI ================= -->
+  
+    <div class="tabbertab">
+      <h2>Wiki</h2>
+      <div id="highlighttext">
+        <div id="everyother">
+          <br/><br/>
+          <p>
+          Some apps on the deck need to be installed on your VortexBox before you can use them.  If you would like to enable these wonderful features, here are some tips to help you get started.      
+          </p>       
+        <br/>
+          <p>
+            <b>Shellinabox</b> is a great tool.  It allows a command-line interface to VortexBox from your web browser.  Learn how to install shellinabox on your VortexBox <a href="http://info.vortexbox.org/tiki-index.php?page=shellinabox">here</a>.
+          </p>
+        <br/>
+          <p>
+            <b>Webmin</b> allows you to manage and monitor the linux operating system from a GUI.  Visit the webmin wiki <a href="http://info.vortexbox.org/tiki-index.php?page=InstallWebmin">here</a> for instructions on installation.
+          </p>
+        <br/>
+          <p>
+            <b>Subsonic</b> can connect to your VortexBox inside and outside your network with very little user configuration.  Upgrade for free <a href="#" onClick="javascript:DOMAIN('/upgrade.php');">here</a>.
+          </p>
+        <br/>
+          <p>
+            <b>Transmission</b> is a great little bittorrent client you can install on your vortexbox.  Install <a href="#" onClick="javascript:DOMAIN('/upgrade.php');">here</a> or click "Upgrade" on the deck.
+          </p>
+        <br/>
+          <p> <b>Bliss</b> allows you to conveniently manage your album cover art.  Install <a href="#" onClick="javascript:DOMAIN('/upgrade.php');">here</a> or click "Upgrade" on the deck.
+          </p>
+        <br/>
+          <p>
+            <b>Other useful links:</b> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://vortexbox.org">vortexbox.org</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://vortexbox.org/forum/">forum</a> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://info.vortexbox.org/">wiki</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://www.facebook.com/pages/VortexBox/176983495196?sk=info">facebook</a> 
+          </p>    
+        </div>
+      </div>
+    </div>
+  
+
+    <!-- ============== OPTIONS ================= -->
+
+    <div class="tabbertab">
+      <h2>Options</h2>
+      <div id="highlighttext">
+        <div id="everyother"> 
+          <br/><br/>
+          <p>
+          <b> Options</b> <br/><br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            To change the stored IP address for your VortexBox, or set your subsonic domain, visit the options <a href="options.html">menu</a>.  You can also adjust by clicking the wrench on the VortexBox icon in the app menu.  For more details, visit the  <a href="http://info.vortexbox.org/tiki-index.php?page=Chrome">wiki</a> for this app.
+          </p>
+          <br/>
+          <p>
+            <b> About</b> <br/><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              VortexBox Web App:  version 0.6
+          </p>
+          <br/>
+          <p>
+            <b> Uninstall</b> <br/><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              In the Chrome app menu, click the wrench on the VortexBox icon and select "Uninstall".
+          </p>
+          <br/>   
+          <p>
+            <b>Source</b> <br/><br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              To find out where the source code is located on your machine, visit the <a href="http://www.chromium.org/user-experience/user-data-directory"> chromium website</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============== REMOTE ================= -->
+    
+    <div class="tabbertab">
+      <h2>Remote</h2>
+        <div id="remotebg">
+          <div>
+            <iframe src="/html/remote.html"></iframe> 
+          </div>
+        </div>
+    </div>
+
+  
+  </div>
+
+</body>
+
+</html>
