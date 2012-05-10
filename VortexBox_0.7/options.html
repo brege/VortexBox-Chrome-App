@@ -1,0 +1,183 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+<title>VortexBox Options</title>
+<script type="text/javascript" src="/js/jquery.min.js"></script> 
+<script type="text/javascript" src="/js/constants.js"></script>
+<script type="text/javascript" src="/js/options.js"></script>
+
+<link rel="stylesheet" href="/options.css" type="text/css" media="screen"/>
+
+
+</head>
+
+<body>
+	<div title="vortexbox.org" id="displayed" style="text-align:center;">
+		<h3>
+			<a href="http://vortexbox.org/"><img src="/images/vortexbox_new_logo.png"><a>
+		</h3>
+	</div>
+  <p/>
+  <div class="vb-appbar">
+    <h2 class="vb-appname">VortexBox Options</h2>
+    <a class="vb-goback" href="deck.html">&larr; Back to deck</a>
+  </div>
+  
+  <div class="cent">
+    <div class="content">
+    <div id="status" class="vb-bubble alert"></div>
+    <p id="vb-fontsize">
+      <p>Adjust protocols, ports and the localhost IP address for various VortexBox applications.</p>
+      
+      <br/> 
+
+      <div class="vb-appvbRed">
+        VortexBox 
+      </div>
+      <select class="vb-select vb-select-submit" id="vortexbox-protocol">
+        <option>http</option>
+        <option>https</option>
+      </select> 
+      <a class="vb-fontsize">
+       ://
+      </a>  
+      <input type="text" id="domain" value=""/> 
+      <a class="vb-button vb-button-submit" id="save">Save</a>
+
+      <br/><br/><br/>
+      
+      <div class="vb-appvbRed">
+        Subsonic Online 
+      </div>
+      <select class="vb-select vb-select-submit" id="subsonic-online-protocol">
+        <option>http</option>
+        <option>https</option>
+      </select> 
+      <a class="vb-fontsize">
+       ://
+      </a>  
+      <input type="text" id="subsonic-online-domain" value=""/> 
+      <a class="vb-button vb-button-submit" id="save">Save</a>
+
+      <br/><br/><br/>
+
+      <div class="vb-appvbClear">&nbsp;</div> 
+      <div class="vb-appvbBlue">
+        Protocol
+      </div>
+      <div class="vb-appvbBlue">
+        Port
+      </div>
+
+      <br/><br/><br/>
+      
+      <div class="vb-appvbRed">
+        SqueezeBox Server 
+      </div> 
+      <select class="vb-select vb-select-submit" id="squeezebox-protocol">
+        <option>http</option>
+        <option>https</option>
+      </select>
+      <input type="text" id="squeezebox-port" value="" size="4" />
+      <a class="vb-fontsize-a">
+      e.g: <script> document.write(defaults[3]); </script>
+      </a>  
+      <a class="vb-button vb-button-submit" id="save">Save</a>
+
+      <br/><br/> 
+      
+      <div class="vb-appvbRed">
+        Transmission 
+      </div> 
+      <select class="vb-select vb-select-submit" id="transmission-protocol">
+        <option>http</option>
+        <option>https</option>
+      </select>
+      <input type="text" id="transmission-port" value="" size="4" />
+      <a class="vb-fontsize-a">
+      e.g: <script> document.write(defaults[5]); </script>
+      </a>  
+      <a class="vb-button vb-button-submit" id="save">Save</a>      
+
+      <br/><br/> 
+      
+      <div class="vb-appvbRed">
+        MusicIP 
+      </div> 
+      <select class="vb-select vb-select-submit" id="musicip-protocol">
+        <option>http</option>
+        <option>https</option>
+      </select>
+      <input type="text" id="musicip-port" value="" size="4" />
+      <a class="vb-fontsize-a">
+      e.g: <script> document.write(defaults[7]); </script>
+      </a>  
+      <a class="vb-button vb-button-submit" id="save">Save</a>      
+
+      <br/><br/> 
+      
+      <div class="vb-appvbRed">
+        Subsonic 
+      </div> 
+      <select class="vb-select vb-select-submit" id="subsonic-protocol">
+        <option>http</option>
+        <option>https</option>
+      </select>
+      <input type="text" id="subsonic-port" value="" size="4" />
+      <a class="vb-fontsize-a">
+      e.g: <script> document.write(defaults[9]); </script>
+      </a>  
+      <a class="vb-button vb-button-submit" id="save">Save</a>      
+
+      <br/><br/> 
+
+      <div class="vb-appvbRed">
+        Bliss
+      </div> 
+      <select class="vb-select vb-select-submit"id="bliss-protocol">
+        <option>http</option>
+        <option>https</option>
+      </select>
+      <input type="text" id="bliss-port" value="" size="4" />
+      <a class="vb-fontsize-a">
+      e.g: <script> document.write(defaults[11]); </script>
+      </a>  
+      <a class="vb-button vb-button-submit" id="save">Save</a>      
+      
+      <br/><br/> 
+      
+      <div class="vb-appvbRed">
+        Webmin
+      </div> 
+      <select class="vb-select vb-select-submit" id="webmin-protocol">
+        <option>http</option>
+        <option>https</option>
+      </select>
+      <input type="text" id="webmin-port" value="" size="4" />
+      <a class="vb-fontsize-a">
+      e.g: <script> document.write(defaults[13]); </script>
+      </a>  
+      <a class="vb-button vb-button-submit" id="save">Save</a>      
+
+      <br/><br/> 
+      
+      <div class="vb-appvbRed">
+        Shellinabox 
+      </div> 
+      <select class="vb-select vb-select-submit" id="shellinabox-protocol">
+        <option>http</option>
+        <option>https</option>
+      </select>
+      <input type="text" id="shellinabox-port" value="" size="4" />
+      <a class="vb-fontsize-a">
+      e.g: <script> document.write(defaults[15]); </script>
+      </a>  
+      <a class="vb-button vb-button-submit" id="save">Save</a>      
+
+    </p>
+   </div>
+  </div>
+</body>
+
+
+</html>

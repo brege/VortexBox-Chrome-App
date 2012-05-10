@@ -1,0 +1,22 @@
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>bliss</title>
+  <script type="text/javascript" src="/js/constants.js"></script>
+  <script type="text/javascript">
+    domain = localStorage['domain'] || defaults[1];
+    protocol = localStorage['bliss-protocol'] || defaults[10];
+    port =  localStorage['bliss-port'] || defaults[11];
+		function init() {
+      window.parent.location.href=protocol+'://'+domain+':'+port;
+      document.getElementById( 'box' );				
+		};
+  </script>
+</head>
+
+<body onload="init();">
+	<div id="box"></div>
+</body>
+
+</html>

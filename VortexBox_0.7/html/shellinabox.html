@@ -1,0 +1,22 @@
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>Shellinabox</title>
+  <script type="text/javascript" src="/js/constants.js"></script>
+  <script type="text/javascript">
+    domain = localStorage['domain'] || defaults[1];
+    protocol = localStorage['shellinabox-protocol'] || defaults[14];
+    port =  localStorage['shellinabox-port'] || defaults[15];
+		function init() {
+      window.parent.location.href=protocol+'://'+domain+':'+port;
+      document.getElementById( 'box' );				
+		};
+  </script>
+</head>
+
+<body onload="init();">
+	<div id="box"></div>
+</body>
+
+</html>

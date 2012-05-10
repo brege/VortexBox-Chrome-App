@@ -1,0 +1,23 @@
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>Remote</title>
+  <script type="text/javascript" src="/js/constants.js"></script>
+  <script content-type:application/x-javascript>
+    domain = localStorage['domain'] || defaults[1];
+    protocol = localStorage['squeezebox-protocol'] || defaults[2];
+    port =  localStorage['squeezebox-port'] || defaults[3];
+		function init() {
+      window.document.location.href=protocol+'://'+domain+':'+port;
+      document.getElementById( 'box' );				
+		};
+  </script>
+
+</head>
+
+<body onload="init();">
+	<div id="box"></div>
+</body>
+
+</html>
